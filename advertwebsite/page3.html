@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onaz Collection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <marquee behavior="alternate" direction="right"><h1>Product3</h1></marquee>
+           <nav>
+            <div class="topnav">
+        <ul>
+                <li><a href="page1.html">Page1</a></li>
+                <li><a href="page2.html">Page2</a></li>
+                <li><a href="page3.html">Page3</a></li>
+                <li><a href="page4.html">Page4</a></li>
+                <li><a href="page5.html">Page5</a></li>
+            
+        </ul>
+            </div>
+    </nav>
+
+<img src="c:\Users\User\Downloads\image3.jpg" alt="">
+<h2>Fashion Vintage Men's Shirt Long Sleeve Gilded Shirt-gold</h2>
+<p><br>Closure Type:Single Breasted</br>
+    <br>Style:Casual</br>
+   <br> Sleeve Style:REGULAR</br>
+   <br> Model Number:Men Shirts</br>
+</p>
+<p><span class="price">Price:</span>KSH800</p>
+
+<a class="btn" href="https://www.jumia.co.ke/fashion-mens-long-sleeve-shirt-fashion-thin-shirt-gold-80775453.html"><button>CLICK TO ORDER</button></a>
+
+
+<div class="rate">
+    <span onclick="gfg(1)" class="star">&starf;</span>
+    <span onclick="gfg(2)" class="star">&starf;</span>
+    <span onclick="gfg(3)" class="star">&starf;</span>
+    <span onclick="gfg(4)" class="star">&starf;</span>
+    <span onclick="gfg(5)" class="star">&starf;</span>
+    <h3 id="output">
+        Rating is: 0/5
+    </h3>
+</div>
+
+<a href="mailto:emmanueloduol@zetech.ac.ke">send email:emmanueloduol@zetech.ac.ke </a>
+
+
+
+
+
+
+   
+    <style>
+        body {
+            margin: 0;
+            background-color: orange;
+            
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    .topnav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+    }
+    
+    .topnav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+       
+    }
+    .topnav li {
+        display: inline;
+        float: left;
+    }
+    
+    .topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    
+    .topnav a.active {
+        background-color: #04aa6d;
+        color: white;
+    }
+    
+    .topnav li a:hover:not(.active) {
+        background-color: #04aa6d;
+    }
+
+    .price{
+    color: red;
+}
+
+    .rate{
+    max-width: 33rem;
+    background: #fff;
+    margin: 0 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.star {
+    font-size: 10vh;
+}
+
+.one {
+    color: rgb(255, 0, 0);
+}
+.two {
+    color: rgb(255, 106, 0);
+}
+.three {
+    color: rgb(251, 255, 120);
+}
+.four {
+    color: rgb(255, 255, 0);
+}
+.five {
+    color: rgb(24, 159, 14);
+}
+
+.btn  a:hover:not(.active) {
+        background-color: #04aa6d;
+    }
+    
+    
+    </style>
+
+<script src="script.js">
+
+    let stars =
+    document.getElementsByClassName("star");
+    let output = 
+    document.getElementById("output");
+    function gfg(n) {
+    remove();
+    for (let i = 0; i < n; i++) {
+    if (n == 1) cls = "one";
+    else if (n == 2) cls = "two";
+    else if (n == 3) cls = "three";
+    else if (n == 4) cls = "four";
+    else if (n == 5) cls = "five";
+    stars[i].className = "star" + cls;
+    }
+    output.innerText = "Rating is: " + n + "/5";
+    }
+    function remove () {
+    let i = 0;
+    while ( i < 5) {
+    stars[i].className = "star";
+    i++;
+    }
+    }
+    
+    </script>
+
+
+
+
+
+</body>
+</html>
