@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>DIGITAL PORTOFOLIO</title>
+   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+    <link rel="stylesheet" href="style.css">
+    
+
+
+</head>
+<body>
+<body style="background-color: orange;"></body>
+
+    <section id="header">
+        
+        <div> 
+            <ul id="navbar">
+                <li><a class="active" href="homepage.html">Homepage</a></li>
+                <li><a href="childhood.html">Childhood</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills&talent.html">Skills & Talent</a></li>
+                <li><a href="future aspirations.html">Future Aspirations</a></li>
+                <li><a href="contact information.html">Contact Infotmation</a></li>
+                
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrapper">
+            <div class="form">
+                <div class="title">
+                    Login To Coding Market
+                </div>
+                <form method="post" action="successpage.html" onsubmit="return validation();">
+                    <div class="input_wrap">
+                        <label for="input_text">Email or Username</label>
+                        <div class="input_field">
+                            <input type="text" class="input" id="input_text">
+                        </div>
+                    </div>
+                    <div class="input_wrap">
+                        <label for="input_password">Password</label>
+                        <div class="input_field">
+                            <input type="password" class="input" id="input_password">
+                        </div>
+                    </div>
+                    <div class="input_wrap">
+                        <span class="error_msg">Incorrect username or password. Please try again</span>
+                        <input type="submit" id="login_btn" class="btn disabled" value="Login" disabled="true">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <style>
+            .wrapper{
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .form{
+                width: 425px;
+                height: auto;
+                background: #fff;
+                padding: 35px 50px;
+                border-radius: 2px;
+            }
+            
+            .form .title{
+                text-align: center;
+                margin-bottom: 20px;
+                font-weight: 700;
+                font-size: 24px;
+            }
+            
+            .form .input_wrap{
+                margin-bottom: 20px;
+                width: 325px;
+                position: relative;
+            }
+            
+            .form .input_wrap:last-child{
+                margin-bottom: 0;
+            }
+            
+            .form .input_wrap label{
+                display: block;
+                margin-bottom: 5px;
+            }
+            
+            .form .input_wrap input{
+                padding: 15px;
+                width: 100%;
+                border: 1px solid transparent;
+                font-size: 16px;
+                border-radius: 3px;
+            }
+            
+            .form .input_wrap .input{
+                background: #f5f4f4;
+                padding-right: 35px;
+            }
+            
+            
+            .form .input_wrap .input:focus{
+                border-color: #1dbf73;
+            }
+            
+            .form .input_wrap .input_field{
+                position: relative;
+            }
+            
+            .form .input_wrap .btn{
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                color: #fff;
+            }
+            
+            .form .input_wrap .btn.disabled{
+                background: #727272;
+            }
+            
+            .form .input_wrap .btn.enabled{
+                background: #1dbf73;
+                cursor: pointer;
+            }
+            
+            .form .input_wrap .error_msg{
+                font-size: 15px;
+                margin-bottom: 5px;	
+                color: #f74040;
+                display: none;
+            }
+        </style>
+        <script>
+            function validation(){
+                var input_text = document.querySelector("#input_text");
+                var input_password = document.querySelector("#input_password");
+                var error_msg = document.querySelector(".error_msg");
+            
+                if(input_text.value.length <= 3 || input_password.value.length <= 3 ){
+                    error_msg.style.display = "inline-block";
+                    input_text.style.border = "1px solid #f74040";
+                    input_password.style.border = "1px solid #f74040";
+                    return false;
+                }
+                else{
+                alert("form submitted successfully")
+                    return true;
+                }
+                
+            }
+            
+            var input_fields = document.querySelectorAll(".input");
+            var login_btn = document.querySelector("#login_btn");
+            
+            input_fields.forEach(function(input_item){
+                input_item.addEventListener("input", function(){
+                    if(input_item.value.length > 3){
+                        login_btn.disabled = false;
+                        login_btn.className = "btn enabled"
+                    }
+                })
+            })
+        </script>
+    </section>
+    
+<h1>INTRODUCTION</h1>
+<P> I'm Emmanuel Geno Oduol,</P>
+<br>From Nairobi Makongeni Estate<br>
+    <br>An individual propelled by a dual passion for technology and athletics. <br>
+    <br> My objective is to excel in both realms, aspiring to leave a significant mark in programming <br>
+      <br>while sprinting towards success in the 100m track.<br>
+       <center><img src="c:\Users\User\Downloads\emmanu.jpeg"></center>
+       <center><br>As Emmanuel Geno Oduol,<br>
+        <br> my identity is shaped by a profound passion for two distinct yet intertwined worlds: <br>
+          <br>technology and athletics. In the tech sphere, my fascination with programming fuels my drive to innovate and create.
+          <br> Simultaneously, my love for sprinting, especially the intense rush of the 100m,
+           <br> ignites a competitive spirit within me.
+
+       <br>This homepage acts as a springboard, encapsulating my overarching goal:
+        <br>to achieve significant success and impact in both realms. It reflects the fusion of dedication, 
+       <br> perseverance, and a relentless pursuit of excellence.
+        <br> It's a testament to my commitment to not just excel but to leave a lasting mark in programming and on the track.
+       
+      <br> Visitors stepping into this space will get a glimpse of my unwavering dedication,
+       <br> my drive to push boundaries, and my enthusiasm for embracing challenges head-on.
+        <br> Through concise yet compelling content, the homepage invites them to delve deeper into my journey,
+         <br> exploring how my childhood, education, skills, and aspirations all converge to shape a unique and multifaceted individual.
+       
+      <br> Ultimately, this homepage acts as a gateway,
+        <br>inviting individuals to learn more about my endeavors, connect, and perhaps even collaborate on ventures that resonate with these shared passions.
+       
+       
+       
+       
+       
+       <br></center>
+      
+    
+    
+       <div class="footer">
+        <marquee behavior="alternate" direction="left-right" style="border: black 2px solid;"><em><p>MY DIGITAL PORTOFOLIO</p></em></marquee> 
+       </div>
+    
+    <section>
+        <div class="container">
+            <div class="display-date">
+              <span id="day">day</span>,
+              <span id="daynum">00</span>
+              <span id="month">month</span>
+              <span id="year">0000</span>
+            </div>
+            <div class="display-time"></div>
+          </div>
+          <style>
+            @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+.display-date {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.display-time {
+  display: flex;
+  font-size: 5rem;
+  font-weight: bold;
+  border: 2px solid #161616;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: ease-in-out 0.1s;
+  transition-property: background, box-shadow, color;
+  -webkit-box-reflect: below 2px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.05));
+}
+
+.display-time:hover {
+  background: #ffd868;
+  box-shadow: 0 0 30px#0e0d0d;
+  color: #272727;
+  cursor: pointer;
+}
+          </style>
+          <script>
+            const displayTime = document.querySelector(".display-time");
+// Time
+function showTime() {
+  let time = new Date();
+  displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
+  setTimeout(showTime, 1000);
+}
+
+showTime();
+
+// Date
+function updateDate() {
+  let today = new Date();
+
+  // return number
+  let dayName = today.getDay(),
+    dayNum = today.getDate(),
+    month = today.getMonth(),
+    year = today.getFullYear();
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const dayWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  // value -> ID of the html element
+  const IDCollection = ["day", "daynum", "month", "year"];
+  // return value array with number as a index
+  const val = [dayWeek[dayName], dayNum, months[month], year];
+  for (let i = 0; i < IDCollection.length; i++) {
+    document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
+  }
+}
+
+updateDate();
+
+          </script>
+    </section>
+       
+
+</body>
+
+
+    <style>
+        #header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 80px;
+            background: grey;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            z-index: 999;
+            position: sticky;
+            top: 0;
+            left: 0;
+    
+        }
+        #navbar{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           
+       }
+       
+       #navbar li{
+           list-style: none;
+           padding: 0 20px;
+       }
+       #navbar li a{
+           text-decoration: none;
+           font-size: 16px;
+           font-weight: 600;
+           color: black;
+           transition: 0.3s ease;
+       }
+       
+       #navbar li a:hover,
+       #navbar li a.active {
+           color: rgb(9, 233, 84);
+           
+       }
+       #navbar li a.active::after,
+       #navbar li a:hover::after{
+           content: "";
+           width: 30%;
+           height: 2px;
+           background: green;
+           position: absolute;
+           bottom: -4px;
+           left: 20px;
+       }
+       #body {
+        text-align: center;
+       }
+       
+    
+        
+ </style>
+       
+        
+</html>

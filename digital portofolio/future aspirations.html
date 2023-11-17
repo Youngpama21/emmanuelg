@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>DIGITAL PORTOFOLIO</title>
+   
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  
+    <link rel="stylesheet" href="style.css">
+    
+
+
+</head>
+<body>
+    <body style="background-color: orange;"></body>
+
+    <section id="header">
+        
+        <div> 
+            <ul id="navbar">
+                <li><a href="homepage.html">Homepage</a></li>
+                <li><a href="childhood.html">Childhood</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="skills&talent.html">Skills & Talent</a></li>
+                <li><a class="active" href="future aspirations.html">Future Aspirations</a></li>
+                <li><a href="contact information.html">Contact Infotmation</a></li>
+                
+            </ul>
+        </div>
+    </section>
+
+    <h1>Future Aspirations</h1>
+   <center> <p>My career goals involve a convergence of my tech skills and athletic prowess.</p>
+    <img src="c:\Users\User\Downloads\bolt.jpeg" alt="">
+    <p> I aim to carve a path where I excel in programming while still pursuing my passion for sprinting. Ultimately, I aspire to be a successful and influential figure in both these worlds.</p>
+     <img src="c:\Users\User\Downloads\prog.jpeg" alt="">
+     <p>Absolutely! Skills and talents are the threads that weave together the fabric of our capabilities, shaping our identity and influencing our pursuits.
+
+        <br>One prominent facet of my skill set lies in dance, where I discovered a talent and passion that extended beyond academics and athletics. As part of the group "The Rock," I embraced the art of dance and performance. Competing in various dance competitions, we not only showcased our skills but also secured victories, which stand as a testament to our dedication and synergy as a team.
+        
+       <br> Dance served as an avenue for creative expression, fostering teamwork, discipline, and synchronization—skills that transcend the dance floor. It taught me the importance of collaboration, coordination, and the power of synchronized efforts toward a common goal.
+        
+       <br> Moreover, in the world of technology, my skill set extends to programming—a realm where creativity meets logical problem-solving. My proficiency in programming languages and the ability to conceptualize and develop solutions are pivotal assets. This skill set forms the backbone of my aspirations in the tech sphere, empowering me to create, innovate, and contribute meaningfully.
+        
+       <br> Combining these talents—be it in dance or programming—demonstrates my versatility, adaptability, and the capacity to excel in diverse domains. These skills are not just individual traits but complementary facets that contribute to a well-rounded persona, shaping my journey towards success in both technology and athletics.</p>
+        </center>
+        <footer>
+            <div class="footer">
+             <marquee behavior="alternate" direction="left-right" style="border: black 2px solid;"><em><p>MY DIGITAL PORTOFOLIO</p></em></marquee> 
+            </div>
+            </footer>
+
+            <section>
+                <div class="container">
+                    <div class="display-date">
+                      <span id="day">day</span>,
+                      <span id="daynum">00</span>
+                      <span id="month">month</span>
+                      <span id="year">0000</span>
+                    </div>
+                    <div class="display-time"></div>
+                  </div>
+                  <style>
+                    @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+
+.display-date {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.display-time {
+  display: flex;
+  font-size: 5rem;
+  font-weight: bold;
+  border: 2px solid #161615;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: ease-in-out 0.1s;
+  transition-property: background, box-shadow, color;
+  -webkit-box-reflect: below 2px
+    linear-gradient(transparent, rgba(255, 255, 255, 0.05));
+}
+
+.display-time:hover {
+  background: #ffd868;
+  box-shadow: 0 0 30px#161616;
+  color: #272727;
+  cursor: pointer;
+}
+                  </style>
+                  <script>
+                    const displayTime = document.querySelector(".display-time");
+// Time
+function showTime() {
+  let time = new Date();
+  displayTime.innerText = time.toLocaleTimeString("en-US", { hour12: false });
+  setTimeout(showTime, 1000);
+}
+
+showTime();
+
+// Date
+function updateDate() {
+  let today = new Date();
+
+  // return number
+  let dayName = today.getDay(),
+    dayNum = today.getDate(),
+    month = today.getMonth(),
+    year = today.getFullYear();
+
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const dayWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  // value -> ID of the html element
+  const IDCollection = ["day", "daynum", "month", "year"];
+  // return value array with number as a index
+  const val = [dayWeek[dayName], dayNum, months[month], year];
+  for (let i = 0; i < IDCollection.length; i++) {
+    document.getElementById(IDCollection[i]).firstChild.nodeValue = val[i];
+  }
+}
+
+updateDate();
+
+                  </script>
+            </section>
+         
+
+</body>
+<style>
+    #header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 80px;
+        background: grey;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
+
+    }
+    #navbar{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+   
+   }
+   
+   #navbar li{
+       list-style: none;
+       padding: 0 20px;
+   }
+   #navbar li a{
+       text-decoration: none;
+       font-size: 16px;
+       font-weight: 600;
+       color: black;
+       transition: 0.3s ease;
+   }
+   
+   #navbar li a:hover,
+   #navbar li a.active {
+       color: rgb(9, 233, 84);
+       
+   }
+   #navbar li a.active::after,
+   #navbar li a:hover::after{
+       content: "";
+       width: 30%;
+       height: 2px;
+       background: green;
+       position: absolute;
+       bottom: -4px;
+       left: 20px;
+   }
+   </style>
+   
+   </html>
